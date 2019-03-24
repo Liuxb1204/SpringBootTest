@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8"/>
+		<title>主页</title>
+	</head>
+	<body>
+		<div>欢迎光临</div>
+		<div th:text="${name}"></div>
+		<table>
+			<tr th:each="ln : ${list}">
+			<td th:text = "${ln}"></td>
+			</tr>
+		</table>
+		<input type="text" id="name" th:value="${phone}"/>
+		
+		<img alt="" width="800px" height="600px" src="img/desk.jpg"/>
+	</body>
+</html>
