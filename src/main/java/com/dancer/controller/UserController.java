@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,11 +37,17 @@ public class UserController {
 	private UserService userservice;
 	@Autowired
 	private UserMapper usermapper;
+	
+	//获取配置文件的数据
+	@Value("${testname}")
+	private String myname;
+	@Value("${testsex}")
+	private String mysex;
 		
 	@RequestMapping("/hello")
 	public String hello(){
 		
-		return "hello dancer";
+		return "hello "+myname+" sex:"+mysex;
 	}
 	
 	@RequestMapping("/login")
