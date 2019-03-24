@@ -3,12 +3,15 @@
   <groupId>com.dancer</groupId>
   <artifactId>SpringBootTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.7.RELEASE</version>
 	</parent>
+	
 <dependencies>
+
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-web</artifactId>
@@ -27,10 +30,27 @@
 	   <artifactId>mybatis-spring-boot-starter</artifactId>
 	   <version>1.1.1</version>
 	</dependency>
+	
 	<dependency>
 	   <groupId>mysql</groupId>
 	   <artifactId>mysql-connector-java</artifactId>
 	   <version>5.1.21</version>
 	</dependency>
+	
+	<!-- mybatisplus包 -->
+	<dependency>
+		<groupId>com.baomidou</groupId>
+		<artifactId>mybatis-plus</artifactId>
+		<version>2.1.4</version>
+	</dependency>
+	
+	<!-- 代码自动生成 -->
+	<dependency>
+		<groupId>org.apache.velocity</groupId>
+		<artifactId>velocity-engine-core</artifactId>
+		<version>2.0</version>
+	</dependency>
+	
+	
 </dependencies>
 </project>

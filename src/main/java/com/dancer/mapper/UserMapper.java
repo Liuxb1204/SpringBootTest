@@ -7,17 +7,20 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.dancer.entity.User;
 
 
 /**
  * @author Dancer
+ * 
+ * 继承了mybatisPlus的basemappser类 就不需要再手写sql了
  *
  */
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User>{
 	
-	@Select("select * from user where id = #{id}")
+	/*@Select("select * from user where id = #{id}")
 	User getUserById(@Param("id") Integer id);
 	
 	@Insert("insert into user VALUES (NULL,#{username},#{password},NULL,NULL,NULL)")
@@ -27,7 +30,7 @@ public interface UserMapper {
 	int update(@Param("username")String username,@Param("id")Integer id);
 	
 	@Delete("delete from user where id = #{id}")
-	void delete(@Param("id") Integer id);
+	void delete(@Param("id") Integer id);*/
 
 }
 
