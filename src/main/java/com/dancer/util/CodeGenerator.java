@@ -19,7 +19,9 @@ public class CodeGenerator {
 
 	/**
 	 * <p>
-	 * MySQL 代码自动生成类
+	 * MySQL 代码自动生成类 
+	 * 
+	 * 需要手动在mapper类添加mapper注解
 	 * </p>
 	 */
 	public static void main(String[] args) {
@@ -60,7 +62,7 @@ public class CodeGenerator {
 		// strategy.setCapitalMode(true);// 全局大写命名 ORACLE 注意
 		// strategy.setTablePrefix(new String[] { "tlog_", "tsys_" });// 此处可以修改为您的表前缀
 		strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-		strategy.setInclude(new String[] { "user" }); // 需要生成的表
+		strategy.setInclude(new String[] { "role" }); // 需要生成的表
 		strategy.setRestControllerStyle(true);
 		// strategy.setExclude(new String[]{"test"}); // 排除生成的表
 		// 自定义实体父类

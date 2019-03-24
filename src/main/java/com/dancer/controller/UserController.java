@@ -43,6 +43,12 @@ public class UserController {
 		return "hello dancer";
 	}
 	
+	@RequestMapping("/login")
+	public String login(){
+		
+		return"login";
+	}
+	
 	@RequestMapping("/excep")
 	public String excep(){
 
