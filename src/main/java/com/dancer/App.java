@@ -23,7 +23,7 @@ public class App extends SpringBootServletInitializer{
 		SpringApplication.run(App.class, args);
 	}
 	
-	@Override//为了打包springboot项目
+	@Override //为了打包springboot项目
     protected SpringApplicationBuilder configure(
             SpringApplicationBuilder builder) {
         return builder.sources(this.getClass());
